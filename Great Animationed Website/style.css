@@ -1,8 +1,15 @@
+@font-face {
+    font-family: medu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy';
+    font-family: medu;
 }
 
 html, body {
@@ -15,6 +22,7 @@ html, body {
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
+    padding: 0 2vw;
 }
 
 nav {
@@ -40,7 +48,7 @@ nav {
     color: rgba(0, 0, 0, 0.875);
     position: relative;
     font-size: 18px;
-    transition: all ease 0.4s;
+    transition: all ease 0.5s;
     overflow: hidden;
 }
 
@@ -53,7 +61,7 @@ nav {
     bottom: -100%;
     background-color: black;
     border-radius: 55%;
-    transition: all ease 0.4s;
+    transition: all ease 0.5s;
 }
 
 #nav-part2 h4:hover::after {
@@ -68,4 +76,32 @@ nav {
 }
 #nav-part2 h4:hover a{
     color: white;
+}
+
+#center {
+    height: 65vh;
+    width: 100%;
+    /* background-color: orangered; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid #0000003c;
+    padding-bottom: 2vw;
+}
+
+#left h3{
+    width: 25vw;
+    font-size: 0.2vw;
+}
+
+#center h1{
+    font-size: 10vw;
+    text-align: center;
+    line-height: 8vw;
+}
+
+#page1 video {
+    border-radius: 22px;
+    margin-top: 4vw;
+    width: 100%;
 }
