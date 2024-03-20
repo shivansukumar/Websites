@@ -4,7 +4,6 @@
 }
 
 
-
 *{
     margin: 0;
     padding: 0;
@@ -104,4 +103,57 @@ nav {
     border-radius: 22px;
     margin-top: 4vw;
     width: 100%;
+}
+
+#moving-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+
+
+    right: 0;
+    top: 65vh;
+    
+}
+
+#move-1{
+    height: 100%;
+    width: 100%;
+    background-color: orangered;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#move-2{
+    height: 30vw;
+    width: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#move-3{
+    height: 30vw;
+    width: 30vw;
+    background-color: orangered;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: revolve;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes revolve {
+    from {
+        transform: translate(10%, 10%);
+    }
+    to {
+        transform: translate(-10%, -10%);
+    }
 }
