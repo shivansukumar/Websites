@@ -103,17 +103,15 @@ nav {
     border-radius: 22px;
     margin-top: 4vw;
     width: 100%;
+    position: relative;
 }
 
 #moving-shape {
     position: absolute;
     width: 46vw;
     height: 36vw;
-
-
     right: 0;
     top: 65vh;
-    
 }
 
 #move-1{
@@ -129,31 +127,101 @@ nav {
 #move-2{
     height: 30vw;
     width: 30vw;
-    background-color: orangered;
+    background: linear-gradient(orangered, rgb(224, 94, 47));
     border-radius: 50%;
     filter: blur(20px);
     position: absolute;
+    animation-name: revolve2;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #move-3{
     height: 30vw;
     width: 30vw;
-    background-color: orangered;
+    background: linear-gradient(rgb(255, 69, 0), rgb(219, 73, 24));
     border-radius: 50%;
-    filter: blur(20px);
+    filter: blur(25px);
     position: absolute;
-    animation-name: revolve;
+    animation-name: revolve1;
     animation-timing-function: linear;
     animation-direction: alternate;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     
 }
 
-@keyframes revolve {
+@keyframes revolve1 {
     from {
-        transform: translate(10%, 10%);
+        transform: translate(55%, -3%);
     }
     to {
-        transform: translate(-10%, -10%);
+        transform: translate(0%, 10%);
     }
+}
+
+@keyframes revolve2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+#page2 {
+    padding: 6vw 0vw;
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(205, 179, 232); */
+}
+
+#moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    /* background-color: aqua; */
+    font-size: 9vw;
+    display: inline-block;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    background-color: orangered;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 1vw;
+}
+
+@keyframes move {
+    from {
+        transition: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom {
+    height: 80vh;
+    width: 100%;
+    background-color: royalblue;
 }
