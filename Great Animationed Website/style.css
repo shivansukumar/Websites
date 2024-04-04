@@ -2,6 +2,11 @@
     font-family: medu;
     src: url(./NeueHaasDisplayMediu.ttf);
 }
+@font-face {
+    font-family: medu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
 
 
 *{
@@ -129,7 +134,7 @@ nav {
     width: 30vw;
     background: linear-gradient(orangered, rgb(224, 94, 47));
     border-radius: 50%;
-    filter: blur(20px);
+    filter: blur(30px);
     position: absolute;
     animation-name: revolve2;
     animation-timing-function: linear;
@@ -143,7 +148,7 @@ nav {
     width: 30vw;
     background: linear-gradient(rgb(255, 69, 0), rgb(219, 73, 24));
     border-radius: 50%;
-    filter: blur(25px);
+    filter: blur(35px);
     position: absolute;
     animation-name: revolve1;
     animation-timing-function: linear;
@@ -174,6 +179,7 @@ nav {
     padding: 6vw 0vw;
     min-height: 100vh;
     width: 100%;
+    position: relative;
     /* background-color: rgb(205, 179, 232); */
 }
 
@@ -223,5 +229,96 @@ nav {
 #page2-bottom {
     height: 80vh;
     width: 100%;
-    background-color: royalblue;
+    /* background-color: rgb(155, 163, 187); */
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+#page2-bottom h1 {
+    font-size: 4vw;
+    line-height: 4vw;
+    width: 60%;
+}
+
+#bottom-part2 {
+    width: 20%;
+    /* background-color: aquamarine; */
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 100;
+    margin-top: 2vw;
+}
+
+#page2 #circle {
+    height: 34vw;
+    width: 34vw;
+    position: absolute;
+    /* background: linear-gradient(to top right,rgb(235, 77, 19), #e38810); */
+    background: linear-gradient(to top right,red, blue);
+    border-radius: 50%;
+    top: 57%;
+    left: 22%;
+    filter: blur(25px); 
+    animation-name: circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes circle {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+    to {
+        transform: translate(-10%, 10%) skew(12deg);
+    }
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    padding: 4vw 0;
+}
+
+.elem {
+    height: 150px;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
+    border-bottom: 1px solid rgb(188, 179, 179);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 3vw;
+    /* position: relative; */
+    z-index: 9;
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+
+.elem:hover .overlay{
+    top: 0;
 }
